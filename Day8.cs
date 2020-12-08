@@ -14,8 +14,8 @@ namespace AdventCode2020Day8
     public class Instruction {
 
         private int command = 0;
-        private bool executed = false;
         private int value;
+        private bool executed = false;
 
         public Instruction(string command, int value) {
             if(command == "acc") this.command = Constants.ACC;
@@ -25,12 +25,12 @@ namespace AdventCode2020Day8
 
         public void Execute(CodeSegment cs) {
             if(this.command == Constants.NOP) {
-                cs.index++;
+                cs.Index++;
             } else if(this.command == Constants.ACC) {
-                cs.index++;
+                cs.Index++;
                 cs.Add(this.value);
             } else if(this.command == Constants.JMP) {
-                cs.index += value;
+                cs.Index += value;
             }
             this.executed = true;
         }
@@ -50,7 +50,8 @@ namespace AdventCode2020Day8
                 return command;
             }
             set {
-                command = value;
+                if(value == Constants.NOP || value == Constants.ACC || value == Constants.JMP)
+                    command = value;
             }
         }
 
@@ -69,7 +70,8 @@ namespace AdventCode2020Day8
         private string raw;
         private List<Instruction> Commands;
         private int accumulator = 0;
-        public int index = 0;
+        private int index = 0;
+        private bool terminated = false;
 
         public CodeSegment(string inputstring) {
             this.raw = inputstring;
@@ -85,6 +87,7 @@ namespace AdventCode2020Day8
         public void Reset() {
             accumulator = 0;
             index = 0;
+            terminated = false;
             foreach(Instruction item in Commands) item.Reset();
         }
 
@@ -103,14 +106,14 @@ namespace AdventCode2020Day8
 
                 do {
                     Commands.ElementAt(index).Execute(this);
-                } while(index < (Commands.Count) && !Commands.ElementAt(index).HasExecuted);
+                } while(!terminated && !Commands.ElementAt(index).HasExecuted);
 
-                if(index == Commands.Count)
+                if(terminated)
                     return accumulator;
 
                 Commands.ElementAt(CommandsToChange.ElementAt(i)).Flip();
                 this.Reset();
-                
+
             }
 
             return accumulator;
@@ -118,6 +121,19 @@ namespace AdventCode2020Day8
 
         public void Add(int value) {
             accumulator += value;
+        }
+
+        public int Index {
+            get {
+                return index;
+            }
+
+            set {
+                if(value >= 0 && value < Commands.Count)
+                    index = value;
+                else
+                    terminated = true;
+            }
         }
 
     }
