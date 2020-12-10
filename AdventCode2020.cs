@@ -13,7 +13,8 @@
             //AdventCode2020Day6.Program.DoDay6();
             //AdventCode2020Day7.Program.DoDay7();
             // AdventCode2020Day8.Program.DoDay8();
-            AdventCode2020Day9.Program.DoDay9();
+            //AdventCode2020Day9.Program.DoDay9();
+            AdventCode2020Day10.Program.DoDay10();
         }
     }
 
