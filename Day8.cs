@@ -144,7 +144,7 @@ namespace AdventCode2020Day8
 
             string inputstring;
             int answer = 0;
-            inputstring = System.IO.File.ReadAllText(@"DayEightInput.txt");
+            inputstring = System.IO.File.ReadAllText(@".\Input\DayEightInput.txt");
             CodeSegment Game = new CodeSegment(inputstring);
             answer = Game.Execute();
             System.Console.WriteLine("Accumulator ended at: {0}", answer);

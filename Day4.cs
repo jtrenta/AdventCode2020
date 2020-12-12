@@ -155,7 +155,7 @@ namespace AdventCode2020Day4
     {
 
         public static void DoDay4() {
-            string passportstring = System.IO.File.ReadAllText(@"DayFourInput.txt");
+            string passportstring = System.IO.File.ReadAllText(@".\Input\DayFourInput.txt");
             Day4Data Passports = new Day4Data(passportstring);
             System.Console.WriteLine("Valid passports: {0}", Passports.validpassports);
         }

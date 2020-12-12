@@ -91,7 +91,7 @@ namespace AdventCode2020Day5
     {
 
         public static void DoDay5() {
-            string passportstring = System.IO.File.ReadAllText(@"DayFiveInput.txt");
+            string passportstring = System.IO.File.ReadAllText(@".\Input\DayFiveInput.txt");
             Day5Data Passes = new Day5Data(passportstring);
             System.Console.WriteLine("Your seat: {0}", Passes.FindSeat());
         }

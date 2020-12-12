@@ -118,7 +118,7 @@ namespace AdventCode2020Day3
             slopes.Add(new slope(5, 1));
             slopes.Add(new slope(7, 1));
             slopes.Add(new slope(1, 2));
-            System.IO.StreamReader file = new System.IO.StreamReader(@"DayThreeInput.txt");  
+            System.IO.StreamReader file = new System.IO.StreamReader(@".\Input\DayThreeInput.txt");  
             while((line = file.ReadLine()) != null)  
             {
                 MapData.AddRow(line);

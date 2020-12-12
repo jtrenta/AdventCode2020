@@ -59,7 +59,7 @@ namespace AdventCode2020Day6
             Questionaires = new List<Questionaire>();
             Questionaire newquestionaire;
 
-            inputstring = System.IO.File.ReadAllText(@"DaySixInput.txt");
+            inputstring = System.IO.File.ReadAllText(@".\Input\DaySixInput.txt");
 
             foreach(string item in inputstring.Split(new string[] { Environment.NewLine + Environment.NewLine }, 
                                                                     StringSplitOptions.RemoveEmptyEntries)) {

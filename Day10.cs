@@ -125,7 +125,7 @@ namespace AdventCode2020Day10
     {
         public static void DoDay10() {
 
-            string inputstring = System.IO.File.ReadAllText(@"DayTenInput.txt");
+            string inputstring = System.IO.File.ReadAllText(@".\Input\DayTenInput.txt");
             Chain InputData = new Chain(inputstring);
             System.Console.WriteLine("Answer Part 1: {0}\n", InputData.Steps.Item1*InputData.Steps.Item2);
             System.Console.WriteLine("Answer Part 2: {0}\n", InputData.Paths);

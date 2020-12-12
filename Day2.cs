@@ -68,7 +68,7 @@ namespace AdventCode2020Day2
             string line;
             Day2Data inputdata;
             List<Day2Data> inputlist = new List<Day2Data>();
-            System.IO.StreamReader file = new System.IO.StreamReader(@"DayTwoInput.txt");  
+            System.IO.StreamReader file = new System.IO.StreamReader(@".\Input\DayTwoInput.txt");  
             while((line = file.ReadLine()) != null)  
             {
                 inputdata = new Day2Data(line);

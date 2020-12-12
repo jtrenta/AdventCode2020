@@ -148,7 +148,7 @@ namespace AdventCode2020Day11
     {
         public static void DoDay11() {
 
-            string inputstring = System.IO.File.ReadAllText(@"DayElevenInput.txt");
+            string inputstring = System.IO.File.ReadAllText(@".\Input\DayElevenInput.txt");
             Map Seating = new Map(inputstring, 1, 4);
             int steps = 0;
             do{

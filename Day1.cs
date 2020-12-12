@@ -17,7 +17,7 @@ namespace AdventCode2020Day1
             bool found = false;
             System.Console.WriteLine("Day1Part1");
             List<int> InputList = new List<int>();
-            System.IO.StreamReader file = new System.IO.StreamReader(@"DayOneInput.txt");  
+            System.IO.StreamReader file = new System.IO.StreamReader(@"D.\Input\DayOneInput.txt");  
             while((line = file.ReadLine()) != null)  
             {  
                 if(int.TryParse(line, out value)) {

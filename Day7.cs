@@ -106,7 +106,7 @@ namespace AdventCode2020Day7
             int numCombinations = 0;
             int numNecessary = 0;
 
-            inputstring = System.IO.File.ReadAllText(@"DaySevenInput.txt");
+            inputstring = System.IO.File.ReadAllText(@".\Input\DaySevenInput.txt");
 
             foreach(string item in inputstring.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries)) {
                 newRule = new Rule(item);

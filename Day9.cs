@@ -107,7 +107,7 @@ namespace AdventCode2020Day9
     {
         public static void DoDay9() {
 
-            string inputstring = System.IO.File.ReadAllText(@"DayNineInput.txt");
+            string inputstring = System.IO.File.ReadAllText(@".\Input\DayNineInput.txt");
             XMAS EncryptedData = new XMAS(inputstring, 25);
             int? weakness = EncryptedData.Weakness;
             int? answer = EncryptedData.Answer;
